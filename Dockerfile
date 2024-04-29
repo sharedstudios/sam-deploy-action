@@ -9,7 +9,7 @@ LABEL com.github.actions.color="orange"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y awscli --no-cache
+RUN apt-get update && apt-get install -y awscli
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
