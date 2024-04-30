@@ -9,7 +9,13 @@ LABEL com.github.actions.color="orange"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y awscli
+#RUN apt-get update && apt-get install -y awscli
+
+# Install Python3 development libraries
+RUN apt-get update && apt-get install -y python3-dev
+
+# Install awscli using pip
+RUN apt-get update && apt-get install -y python3-pip && pip install awscli
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
