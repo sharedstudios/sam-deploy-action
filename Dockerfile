@@ -1,4 +1,4 @@
-FROM ubuntu:22.04.4
+FROM ubuntu:22.04
 
 LABEL version="1.0.0"
 
